@@ -27,4 +27,4 @@ def short_version():
 
 if __name__ == '__main__':
     long_version()
-    # short_version()
+    short_version()
