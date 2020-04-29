@@ -41,5 +41,17 @@ def func_many_multiplication(number: int) -> None:
         print()
 
 
+def short_but_unreadable(number: int):
+    """
+    Print a 1..10 multiplication table as 2d matrix
+    :param number: number of rows
+    """
+    l = len(str(number + 1))
+    ll = len(str((number + 1) * 10))
+    print('\n'.join((f'{outer:{l}}: {" ".join(f"{inner * outer:{ll}}" for inner in range(1, 11))}' for outer in
+                     range(1, number + 1))))
+
+
 if __name__ == '__main__':
     func_many_multiplication(10)
+    short_but_unreadable(10)
